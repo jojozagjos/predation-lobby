@@ -1,0 +1,13 @@
+// The lobby server's Cloudflare configuration. Read by the "Deploy to Cloudflare" button and by
+// Cloudflare's GitHub integration; see Docs/SERVER.md.
+{
+  "name": "predation-lobby",
+  "main": "src/index.js",
+  "compatibility_date": "2025-09-01",
+  "durable_objects": {
+    "bindings": [{ "name": "LOBBIES", "class_name": "LobbyDirectory" }]
+  },
+  // SQLite-backed, which is the kind the free plan has. Nothing is stored in it anyway.
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["LobbyDirectory"] }],
+  "observability": { "enabled": true }
+}

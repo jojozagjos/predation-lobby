@@ -1,0 +1,15 @@
+{
+  "name": "predation-lobby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project Predation lobby server: hands out codes and introduces players, who then connect directly.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "local": "node local-server.js",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
